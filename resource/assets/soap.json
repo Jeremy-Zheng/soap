@@ -1,0 +1,13 @@
+﻿{
+"res":{
+	"stand0000": {"x":0,"y":0,"w":203,"h":141}
+},
+"frames": {
+	"stand": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"stand0000","x":0,"y":0}
+		]
+	}
+}
+}

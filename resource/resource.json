@@ -1,0 +1,12 @@
+{
+"resources":
+	[
+		{"name":"soap_pic","type":"image","url":"assets/soap.png"},
+		{"name":"soap_json","type":"json","url":"assets/soap.json"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"soap_pic,soap_json"}
+	]
+}
