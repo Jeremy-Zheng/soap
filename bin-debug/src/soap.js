@@ -9,13 +9,11 @@ var __extends = this.__extends || function (d, b) {
 */
 var Soap = (function (_super) {
     __extends(Soap, _super);
-    function Soap(x, y) {
+    function Soap(x, y, speed) {
         _super.call(this);
-        this.position_x = x;
-        this.position_y = y;
-        this.createView();
+        this.createView(x, y, speed);
     }
-    Soap.prototype.createView = function () {
+    Soap.prototype.createView = function (x, y, speed) {
         var data = RES.getRes("soap_json");
         var texture = RES.getRes("soap_pic");
         this.soap_animation = new egret.MovieClip(data, texture); //创建MovieClip
@@ -23,8 +21,10 @@ var Soap = (function (_super) {
         this.soap_animation.frameRate = 10; //设置动画的帧频
         this.soap_animation.scaleX = 0.5;
         this.soap_animation.scaleY = 0.5;
-        this.soap_animation.x = this.position_x;
-        this.soap_animation.y = this.position_y;
+        this.soap_animation.x = x;
+        this.soap_animation.y = y;
+        this.is_dead = false;
+        this.speed = speed;
         this.soap_animation.gotoAndPlay("stand"); //跳转到指定帧并开始播放
         this.soap_animation.touchEnabled = true; //可以添加touch事件
     };
